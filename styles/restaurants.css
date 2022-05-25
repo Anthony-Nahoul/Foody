@@ -5,9 +5,9 @@
     box-sizing: border-box;
 }
 .header-container{
-    display: flex;
+    /* display: flex; */
     /* justify-content: center; */
-    gap: 5px;
+    /* gap: 5px; */
     align-items: center;
     margin: 0;
     background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)),url(../assets/headerpic.jpeg);
@@ -20,15 +20,19 @@
 .header-container > img{
     width: 10%;
     height: 30%;
-    margin-top: -30vh;
+    /* margin-top: -30vh; */
 
 }
-.header-container > h1{
+.logotext{
+    text-align: center;
+}
+.logotext > h1{
     font-family: joanna-nova, serif;
-    font-size: 40px;
+    font-size: 56px;
     font-weight: 700;
     line-height: 1.5px;
-    margin-top: -30vh;
+    text-align: center;
+    margin-top: -3vh;
     color: rgb(129, 15, 15);
 }
 .title-restaurants{
@@ -39,4 +43,13 @@
     text-align: center;
     margin-top: 10vh;
     color: rgb(129, 15, 15);
+}
+.logotext > p{
+    /* font-family: joanna-nova, serif; */
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.5px;
+    text-align: center;
+    margin-top: 10vh;
+    color: whitesmoke;
 }
