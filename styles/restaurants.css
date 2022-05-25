@@ -31,3 +31,12 @@
     margin-top: -30vh;
     color: rgb(129, 15, 15);
 }
+.title-restaurants{
+    font-family: joanna-nova, serif;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.5px;
+    text-align: center;
+    margin-top: 10vh;
+    color: rgb(129, 15, 15);
+}
