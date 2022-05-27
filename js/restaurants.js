@@ -6,7 +6,7 @@ transferlink.addEventListener("click", function(){
 reviewbtn.addEventListener("click", function(){
     location.href = "file:///C:/Users/Anthony/Desktop/Foody/pages/reviews.html"
 })
-// this function will store the 
+// this function will store the li in a list and will compare the i to the current item, each 3 items show more
 const show_more_button = document.querySelector("#showmore");
 let currentItem = 3;
 show_more_button.addEventListener("click", function(){
