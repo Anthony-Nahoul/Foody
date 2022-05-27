@@ -160,7 +160,14 @@ nav .fa-solid{
     cursor: pointer;
     text-decoration: none;
 }
-
+#slides{
+    padding: 30px;
+    border: 3px solid rgb(129, 15, 15);
+    background: white;
+    margin-bottom: 5%;
+    position: relative;
+    z-index: 1;
+}
 @media (max-width: 700px){
     .text_box h1{
         font-size: 40px;
