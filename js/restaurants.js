@@ -6,12 +6,11 @@ transferlink.addEventListener("click", function(){
 reviewbtn.addEventListener("click", function(){
     location.href = "file:///C:/Users/Anthony/Desktop/Foody/pages/reviews.html"
 })
-
+// this function will store the 
 const show_more_button = document.querySelector("#showmore");
 let currentItem = 3;
-
 show_more_button.addEventListener("click", function(){
-    let list = document.querySelectorAll("#categories");
+    let list = document.querySelectorAll("#categories > li");
     for (var i= currentItem; i<currentItem + 3; i++){
             list[i].style.display="block";
         
