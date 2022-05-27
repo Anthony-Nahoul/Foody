@@ -206,5 +206,18 @@ nav .fa-solid{
         background-color: rgb(110, 10, 10);
         transition: 1s;
     }
-    
+    .footer {
+        padding: 5%;
+    }
+    .footer .row{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+    .footer p {
+        font-size: 10px;
+    }
+    .footer h1{
+        font-size: 15px;
+    }
 }
