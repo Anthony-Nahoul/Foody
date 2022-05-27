@@ -82,7 +82,12 @@
 }
 #categories li{
     color: #333;
+    display: none;
 }
+#categories li:nth-child(1), #categories li:nth-child(2), #categories li:nth-child(3){
+    display: block;
+}
+
 .show-more a{
     text-decoration: none;
     color: black;
