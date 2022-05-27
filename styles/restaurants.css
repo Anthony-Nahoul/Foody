@@ -65,6 +65,33 @@
     width: 20%;
     padding: 20px;
 }
+.restaurants-types hr{
+    width: 90%;
+    color: darkgrey;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.content span{
+    font-size: 16px;
+    font-weight: 400;
+    /* margin-bottom: 10px; */
+}
+#categories{
+    list-style: none;
+    margin-top: 10px;
+}
+#categories li{
+    color: #333;
+}
+.show-more a{
+    text-decoration: none;
+    color: black;
+    padding-left: 5px;
+}
+.show-more a:hover{
+    text-decoration: underline;
+}
+
 #display-restaurants{
     width: 80%;
     height: 100%;
@@ -83,7 +110,7 @@
 .list-restaurants .cards{
     background-color: white;
     width: 20%;
-    height: 250px;
+    height: 270px;
 }
 .listimg{
     width: 100%;
