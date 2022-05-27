@@ -35,3 +35,19 @@ nav img{
     padding: 8px 12px;
     position: relative;
 }
+.nav_links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 95%;
+}
+.nav_links ul li a::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: white;
+    display: block;
+    margin: auto;
+}
+.nav_links ul li :hover::after{
+    width: 100%;
+}
