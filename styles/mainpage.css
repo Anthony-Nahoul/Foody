@@ -142,6 +142,24 @@ nav .fa-solid{
     color: white;
     padding-right: 2%;
 }
+.categories{
+    text-align: center;
+    justify-content: center;
+}
+#slider{
+    margin: 0 auto;
+    width: 800px;
+    max-width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+#slider input[type=ratio]{
+    display: none;
+}
+#slider label{
+    cursor: pointer;
+    text-decoration: none;
+}
 
 @media (max-width: 700px){
     .text_box h1{
