@@ -1,1 +1,17 @@
 /*CSS Main Page*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Neue Montreal,Helvetica,Arial,sans-serif;;
+}
+
+.header{
+    min-height: 140vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(../assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+}
