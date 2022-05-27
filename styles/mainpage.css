@@ -23,7 +23,7 @@ nav{
 
 }
 nav img{
-    width: 85px;
+    width: 65px;
 }
 .nav_links{
     flex: 1;
@@ -59,18 +59,29 @@ nav img{
     /*transform is used to let the item to be at the center of div*/
     transform: translate(-50%,-50%);
     text-align: center;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-left: 2%;
 }
 .text_box h1{
-    font-size: 40px;
+    font-size: 50px;
+    margin-right: 80px;
+
+}
+.text_box p{
+    font-size: 30px;
+    margin-right: 80px;
+
 }
 nav .fa-solid{
     display: none;
 }
 @media (max-width: 700px){
     .text_box h1{
+        font-size: 40px;
+    }
+    .text_box p{
         font-size: 20px;
+        margin-top: 10px;
     }
     .text_box{
         top: 50%;
