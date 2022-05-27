@@ -65,6 +65,9 @@ nav img{
 .text_box h1{
     font-size: 40px;
 }
+nav .fa-solid{
+    display: none;
+}
 @media (max-width: 700px){
     .text_box h1{
         font-size: 20px;
