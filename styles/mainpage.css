@@ -75,6 +75,30 @@ nav img{
 nav .fa-solid{
     display: none;
 }
+.Restaurants{
+    margin-left: 5%;
+    margin-top: 5%;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.Restaurants img {
+    width: 85%;
+    height: 70vh;
+}
+.Restaurants .col h1{
+    padding-top: 100px;
+    font-size: 50px;
+    padding-bottom: 5%;
+}
+.Restaurants .col p{
+    font-size: 15px;
+}
+.row{
+    display: flex;
+}
+.col{
+    flex-basis: 50%;
+}
 @media (max-width: 700px){
     .text_box h1{
         font-size: 40px;
