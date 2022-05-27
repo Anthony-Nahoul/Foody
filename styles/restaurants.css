@@ -170,3 +170,36 @@
     padding-left: 15px;
     padding-top: 15px;
 }
+
+@media only screen and (max-width: 1250px){
+    .restaurants-container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .content span{
+        font-size: 12px;
+    }
+    #title-card-1{
+        font-size: 16px;
+    }
+
+}
+@media only screen and (max-width: 920px){
+    #display-restaurants{
+        width: 50%;
+    }
+    .list-restaurants{
+        flex-direction: column;
+    }
+    .list-restaurants .cards{
+        width: 80%
+    }
+    .restaurants-types{
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 500px){
+    .title-restaurants{
+        font-size: 30px;
+    }
+}
