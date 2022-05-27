@@ -34,7 +34,7 @@
     line-height: 1.5px;
     text-align: center;
     margin-top: -3vh;
-    color: rgb(129, 15, 15);
+    color: rgb(238, 164, 27, 0.932);
 }
 .title-restaurants{
     font-family: joanna-nova, serif;
@@ -53,7 +53,7 @@
     color: whitesmoke;
 }
 .restaurants-container{
-    background-color: rgb(211, 211, 211);
+    background-color: white;
     display: flex;
     gap: 40px;
     margin-top: 50px;
