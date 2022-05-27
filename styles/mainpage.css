@@ -114,6 +114,11 @@ nav .fa-solid{
     background-color: rgb(110, 10, 10);
     transition: 1s;
 }
+.footer{
+    padding-top: 5%;
+    background-color: rgb(129, 15, 15);
+    color: white;
+}
 @media (max-width: 700px){
     .text_box h1{
         font-size: 40px;
