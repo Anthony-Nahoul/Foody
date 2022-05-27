@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
+/*Menu */
 }
 :root{
     --bordeau: rgb(129, 15, 15);
@@ -75,18 +76,64 @@ body{
     padding-right: 10px;
     padding-top: 15px;
 }
-
-
 .picelement{
     background: none !important;
     pointer-events: none;
     padding-bottom: -25px;
 }
 
-
-
 .title img{
     width: 30%;
     height: 100%;
     
 }
+
+/* main page design*/
+.main{
+    width: 80%;
+}
+.topbar{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 25vw;
+    height: 30vh;
+    align-items: center;
+    padding: 0 10px;
+}
+.toggle{
+    position: relative;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+.main-title{
+    position: relative;
+    text-align: center;
+}
+ h2{
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--bordeau);
+}
+.userimg{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.userimg img{
+    width: 100%;
+    height: 100%;
+    justify-content: end;
+}
+
+
+
