@@ -6,7 +6,7 @@
 }
 
 .header{
-    min-height: 140vh;
+    min-height: 70vh;
     width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)), url(../assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
@@ -50,4 +50,18 @@ nav img{
 }
 .nav_links ul li :hover::after{
     width: 100%;
+}
+.text_box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    left: 50%;
+    /*transform is used to let the item to be at the center of div*/
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 2%;
+}
+.text_box h1{
+    font-size: 40px;
 }
