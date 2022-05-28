@@ -7,13 +7,18 @@
 //     navigation.classList.toggle('active');
 // }
 
+// this function will display the users table on menu users click
 let users = document.getElementById("idusers");
 let usersbtn = document.querySelector("#menu-users");
-console.log("haha");
 
 usersbtn.addEventListener("click", function(){
-    console.log(usersbtn);
     users.style.display = "block";
+})
+// this function will display the reviews table on menu reviews click
+let reviewsbtn = document.querySelector('.reviewbtn');
+let reviews = document.querySelector('.list-reviews');
+reviewsbtn.addEventListener("click", function(){
+    reviews.style.display = 'block';
 })
 
 let menuitems = document.querySelectorAll(".navigation ul li");
