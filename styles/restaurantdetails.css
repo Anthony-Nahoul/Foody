@@ -1,0 +1,12 @@
+/*CSS Restaurant detail*/
+/*CSS RESET*/
+.container-header{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    height: 100px;
+    padding-top: 10px;
+    align-items: center;
+    justify-content: space-between;
+    /* text-align: center; */
+}
