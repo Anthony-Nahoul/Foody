@@ -200,3 +200,32 @@ h2 {
   background-color: var(--bordeau);
   color: white;
 }
+.list-restaurants {
+    width: 85%;
+    margin-left: 2%;
+    display: flex; 
+    flex-flow: column; 
+    /* display: none; */
+  }
+  .list-restaurants h3{
+      font-size: 28px;
+      font-weight: 500;
+  }
+  .restaurants {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 2%;
+  }
+  .restaurants tr:nth-child(even){background-color: #f2f2f2;}
+  .restaurants tr:hover {background-color: #ddd;}
+  .restaurants td, .restaurants th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  .restaurants th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: var(--bordeau);
+    color: white;
+  }
