@@ -47,33 +47,13 @@ function restaurantsClicked(){
     restaurantsbtn.querySelector('a').style.color = "var(--bordeau)";
 }
 
+let addbtn = document.getElementById("#addbtn");
+function addRestaurant(){
 
-// if (users.style.display == "block"){
-//     reviews.style.display = 'none';
-//     restaurants.style.display = 'none';
-// }
-
-
-// let menuitems = document.querySelectorAll(".navigation ul li");
-// for(let item = 0; item < menuitems.length; item++){
-//     menuitems[item].onclick = function(){
-//         // defineActive(menuitems[item]);
-//         // console.log(menuitems[item]);
-//         // if (menuitems[item].classList.contains("active")){
-            
-//         // }
-//         this.style.backgroundColor = "var(--white)";
-//         this.querySelector('a').style.color = "var(--bordeau)";
-//     }
-// }
-// this function will define which button is active and deselect others
-function defineActive(target){
-    menuitems.forEach((btn) => {
-        if (btn == target){
-            btn.classList.add("active");
-        }
-        else {
-            btn.classList.remove("active");
-        }
-    })
+}
+let toggle = document.querySelector(".toggle");
+let navigationbar = document.querySelector(".navigation");
+toggle.addEventListener("click",showMenu);
+function showMenu(){
+    navigationbar.style.display = "block";
 }

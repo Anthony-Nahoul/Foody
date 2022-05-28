@@ -47,6 +47,9 @@ body {
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
+/* .navigation ul li .title{
+  list-style: none;
+} */
 .navigation ul li:hover {
   background-color: var(--white);
 }
@@ -92,14 +95,14 @@ body {
 
 /* main page design*/
 .main {
-  width: 80%;
+  width: 100%;
 }
 .topbar {
   display: flex;
   gap: 25vw;
   height: 30vh;
   align-items: center;
-  padding: 0 10px;
+  padding-left: 10px;
 }
 .toggle {
   position: relative;
@@ -116,7 +119,7 @@ body {
   position: relative;
   text-align: center;
 }
-h2 {
+.main-title h2 {
   font-size: 40px;
   font-weight: 500;
   color: var(--bordeau);
@@ -137,8 +140,9 @@ h2 {
 }
 
 /* details list design*/
+/* design for users*/
 .users {
-  width: 85%;
+  width: 90%;
   margin-left: 2%;
   display: flex; 
   flex-flow: column; 
@@ -167,9 +171,9 @@ h2 {
   background-color: var(--bordeau);
   color: white;
 }
-
+/* design for reviews*/
 .list-reviews {
-  width: 85%;
+  width: 90%;
   margin-left: 2%;
   display: flex; 
   flex-flow: column; 
@@ -198,8 +202,9 @@ h2 {
   background-color: var(--bordeau);
   color: white;
 }
+/* design for restaurants*/
 .list-restaurants {
-    width: 85%;
+    width: 90%;
     margin-left: 2%;
     display: flex; 
     flex-flow: column; 
@@ -293,3 +298,68 @@ h2 {
   background-color: orange;
   color: #FFF;
 }
+
+/* responsiveness*/
+@media only screen and (max-width: 1300px){
+  .main-title h2{
+    font-size: 36px;
+    font-weight: 400;
+  }
+  .topbar {
+    gap: 25vw;
+    padding: 0 5px;
+  }
+}
+@media only screen and (max-width: 1000px){
+  .picelement{
+    display: none;
+  }
+  .navigation li:nth-child(2){
+    margin-top: 90px;
+  }
+  .navigation{
+    display: none;
+    width:8%;
+  }
+
+}
+@media only screen and (max-width: 800px){
+  .main-title h2{
+    font-size: 28px;
+    font-weight: 400;
+  }
+  .topbar {
+    gap: 25vw;
+    padding: 0 5px;
+  }
+}
+@media only screen and (max-width: 700px){
+  .navigation ul li a .icon{
+    text-align: start;
+  }
+  .users, .list-restaurants, .list-reviews{
+    width: 95%;
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .navigation{
+    width:100%;
+  }
+   .topbar {
+    padding: 0 5px;
+    gap: 15vw;
+  }
+  
+  .main{
+    width: 90%;
+  }
+  .userimg img {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+  }  
+}
+
+
+
