@@ -64,12 +64,12 @@ nav img{
 }
 .text_box h1{
     font-size: 50px;
-    margin-right: 80px;
+    margin-right: 10%;
 
 }
 .text_box p{
     font-size: 30px;
-    margin-right: 80px;
+    margin-right: 10%;
 
 }
 nav .fa-solid{
@@ -118,6 +118,7 @@ nav .fa-solid{
     padding-top: 3%;
     background-color: rgb(129, 15, 15);
     color: white;
+    align-items: center;
 }
 .footer .row{
     display: flex;
@@ -146,14 +147,13 @@ nav .fa-solid{
     text-align: center;
     justify-content: center;
 }
-#slider{
+/* #slider{
     margin: 0 auto;
     width: 800px;
     max-width: 100%;
     text-align: center;
-    justify-content: center;
 }
-#slider input[type=ratio]{
+#slider input[type=radio]{
     display: none;
 }
 #slider label{
@@ -161,10 +161,9 @@ nav .fa-solid{
     text-decoration: none;
 }
 #slides{
-    padding: 80px;
+    padding: 10px;
     border: 3px solid rgb(129, 15, 15);
     background: white;
-    margin-bottom: 5%;
     position: relative;
     z-index: 1;
 }
@@ -194,6 +193,55 @@ nav .fa-solid{
     line-height: 0;
     height: 200px;
 }
+#slides .slide{
+    width: 25%;
+    float: left;
+    display: block;
+    height: 100%;
+    color: white;
+}
+#slides .slide1{
+    background: rgb(129, 15, 15);
+}
+#slides .slide2{
+    background: rgb(129, 15, 15);
+}
+#slides .slide3{
+    background: rgb(129, 15, 15);
+}
+#slides .slide4{
+    background: rgb(129, 15, 15);
+}
+.slide-content{
+    padding: 10px;
+}
+#controls{
+    margin: -130px 0 0 0 ;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    position: relative;
+}
+#controls label {
+    transition: opacity 8.2s ease-out;
+    display: none;
+    width: 50px;
+    height: 50px;
+    opacity: .4;
+}
+#controls label:hover{
+    opacity: 1;
+}
+#slide1:checked ~ #controls label:nth-child(2),
+#slide1:checked ~ #controls label:nth-child(3),
+#slide1:checked ~ #controls label:nth-child(4),
+#slide1:checked ~ #controls label:nth-child(1){
+    background: url(https://cdn-icons.flaticon.com/png/512/2989/premium/2989988.png?token=exp=1653736842~hmac=ea7a658ccc1444066e5d23d66224d563);
+    float: right;
+    margin: 0 -50px 0 0;
+    display: block;
+} */
+
 @media (max-width: 700px){
     .text_box h1{
         font-size: 40px;
