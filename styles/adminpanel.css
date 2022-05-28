@@ -177,6 +177,7 @@ h2 {
   display: flex; 
   flex-flow: column; 
   display: none;
+  overflow-x: auto;
 }
 .list-reviews h3{
     font-size: 28px;
@@ -206,6 +207,7 @@ h2 {
     display: flex; 
     flex-flow: column; 
     display: none;
+    overflow-x: auto;
   }
   .list-restaurants h3{
       font-size: 28px;
