@@ -233,6 +233,9 @@ body {
     background-color: var(--bordeau);
     color: white;
   }
+  .restaurants input{
+    width: 100%;
+  }
   .table-btns{
     margin-top: 10vh;
     display: flex;

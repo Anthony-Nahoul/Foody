@@ -34,6 +34,10 @@ function reviewsClicked(){
 let restaurantsbtn = document.querySelector('.restaurantsbtn');
 let restaurants = document.querySelector('.list-restaurants');
 restaurantsbtn.addEventListener("click", restaurantsClicked);
+let addbtn = document.getElementById("addbtn");
+let table_restaurants= document.querySelector('.restaurants');
+let row = document.createElement('tr');
+let table_head = document.getElementsByTagName('th');
 // this function will display the restaurants table on menu reviews click and hide the other tables
 function restaurantsClicked(){
     users.style.display = "none";
@@ -46,11 +50,20 @@ function restaurantsClicked(){
     restaurantsbtn.style.backgroundColor = "var(--white)";
     restaurantsbtn.querySelector('a').style.color = "var(--bordeau)";
 }
-
-let addbtn = document.getElementById("#addbtn");
-function addRestaurant(){
-
+//took the inner html of the table and added the format needed to its rows
+function addRow(){
+    table_restaurants.innerHTML+=`<tr>
+    <td></td>
+    <td><input type='text'/></td>
+    <td><input type='text'/></td>
+    <td><input type='file'/></td>
+    <td><input type='text'/></td>
+    <td><input type='text'/></td>
+</tr>`;
 }
+
+addbtn.addEventListener('click', addRow);
+
 let toggle = document.querySelector(".toggle");
 let navigationbar = document.querySelector(".navigation");
 toggle.addEventListener("click",showMenu);
