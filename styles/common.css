@@ -1,8 +1,17 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+    font-family: joanna-nova, serif;
     box-sizing:border-box;
+}
+body{
+    overflow-x: hidden;
+}
+.mobile-only{
+    display: none!important;
+}
+button{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 .hide{
     display: none!important;
@@ -41,7 +50,7 @@ nav img{
     padding: 8px 12px;
     position: relative;
 }
-.nav_links ul li a{
+.nav_links > ul  > li > a{
     color: white;
     text-decoration: none;
     font-size: 95%;
@@ -53,7 +62,7 @@ nav img{
     border-radius: 50%;
     position: relative;
 }
-.nav_links ul li a::after{
+.nav_links > ul > li > a::after{
     content: '';
     width: 0%;
     height: 2px;
@@ -113,7 +122,10 @@ nav .user-dropdown li{
     padding: 10px 20px;
     color: rgb(129, 15, 15);
 }
-
+nav .user-dropdown li a{
+    color: rgb(129, 15, 15);
+    text-decoration: none;
+}
 nav .user-dropdown li:first-of-type{
     border-bottom: 1px solid lightgrey;
 }
@@ -122,11 +134,20 @@ nav .user-dropdown li:hover{
     color: white;
     cursor:pointer;
 }
+nav .user-dropdown li:hover a{
+    color: white;
+}
 .given{
     color: gold;
 }
 
 @media (max-width: 700px){
+    .desktop-only{
+        display: none!important;
+    }
+    .mobile-only{
+        display: inherit!important;
+    }
     .text_box h1{
         font-size: 40px;
     }
@@ -158,5 +179,6 @@ nav .user-dropdown li:hover{
     } 
     .nav_links ul {
         padding: 50px;
+        flex-wrap: wrap;
     }
 }
