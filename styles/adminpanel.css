@@ -205,7 +205,7 @@ h2 {
     margin-left: 2%;
     display: flex; 
     flex-flow: column; 
-    /* display: none; */
+    display: none;
   }
   .list-restaurants h3{
       font-size: 28px;

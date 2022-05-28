@@ -21,6 +21,13 @@ reviewsbtn.addEventListener("click", function(){
     reviews.style.display = 'block';
 })
 
+let restaurantsbtn = document.querySelector('.restaurantsbtn');
+let restaurants = document.querySelector('.list-restaurants');
+restaurantsbtn.addEventListener("click", function(){
+    restaurants.style.display = 'block';
+})
+
+
 let menuitems = document.querySelectorAll(".navigation ul li");
 for(let item = 0; item < menuitems.length; item++){
     menuitems[item].onclick = function(){
