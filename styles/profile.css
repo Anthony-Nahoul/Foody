@@ -1,14 +1,25 @@
 *{
-    padding: 0;
-    margin: 0;
+    margin-left: 2.5%;
+    margin-right: 5%;
     font-family: Neue Montreal,Helvetica,Arial,sans-serif;
 }
 .header{
-    min-height: 70vh;
+    min-height: 40vh;
     width: 100%;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.5)), url(../assets/julia-zolotova-M_xIaxQE3Ms-unsplash.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
+}
+.profile{
+    align-items: left;
+    display: flex;
+    width: 40vh;
+    height: 40vh;
+}
+.profile img{
+    margin: 20%;
+    border-radius: 50%;
+    width: 90%;
 }
