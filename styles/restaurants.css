@@ -130,9 +130,6 @@
 #title-card-1:hover{
     text-decoration: underline;
 }
-.given{
-    color: gold;
-}
 .rating-cards{
     padding-left: 15px;
     direction: flex;

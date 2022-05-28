@@ -7,6 +7,8 @@
     <link rel="icon" type="image/x-icon" href="../assets/favicon.png" />
     <link href="../styles/common.css" type="text/css" rel="stylesheet" />
     <link href="../styles/restaurantdetails.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Restaurant - details</title>
 </head>
 <body>
@@ -39,7 +41,7 @@
             <p>Discover the best food & drinks in Beirut</p>    
         </div>
     </section>
-    <section class="single-restaurant-details">
+    <section class="single-restaurant-details small-container">
         <h2>
             Roadster Diner
         </h2> 
@@ -63,7 +65,32 @@
             </div>
         </div>
     </section>
+    <section class="single-restaurant-review small-container">
+        <div class="add-review">
+            <button class="review-btn" id="review-popup-button">Review</button>
+        </div>
+    </section>
+    <div class="overlay hide">
+        <div class="popup small-container">
+            <a class="close-icon"><span class="fa fa-close"></span></a>
+            <h2>Review the restaurant</h2>
+            <div class="rating-cards" id="rating-1">
+                <span class="fa fa-star star"></span>
+                <span class="fa fa-star star"></span>
+                <span class="fa fa-star star"></span>
+                <span class="fa fa-star star"></span>
+                <span class="fa fa-star star"></span>
+            </div>
+            <form >
+                <textarea rows="10" placeholder="Add your review"></textarea>
+                <div class="add-review">
+                    <button type="submit" class="review-btn">Review</button>
+                </div>
+            </form>
+        </div>
+    </div>
     <script src="../js/common.js"></script>
+    <script src="../js/restaurantdetails.js"></script>
     <script src="https://kit.fontawesome.com/a2e7f28c2e.js" crossorigin="anonymous"></script>
 </body>
 </html>

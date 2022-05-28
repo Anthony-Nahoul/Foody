@@ -5,7 +5,7 @@
     box-sizing:border-box;
 }
 .hide{
-    display: none;
+    display: none!important;
 }
 .header{
     min-height: 70vh;
@@ -114,4 +114,7 @@ nav .user-dropdown li:hover{
     background: rgb(238, 164, 27);
     color: white;
     cursor:pointer;
+}
+.given{
+    color: gold;
 }
