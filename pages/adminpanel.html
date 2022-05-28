@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.png"/>
+    <link href="../styles/adminpanel.css" type="text/css" rel="stylesheet"/>
+    <title>Foody | Admin Panel</title>
+</head>
+<body>
+    <!-- Menu-->
+    <div id="container" class="container">
+        <div id="navigation" class="navigation">
+            <ul>
+                <li class="picelement">
+                    <a href="#">
+                        <span class="icon"></span>
+                        <span class="title"><img src="../assets/logo_transparent.png" alt="Foody logo"></span>
+                    </a>
+                </li>
+                <li class="restaurantsbtn">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="restaurant-outline"></ion-icon></span>
+                        <span class="title" id="restaurants">Restaurants</span>
+                    </a>
+                </li>
+                <li class="reviewbtn">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="ribbon-outline"></ion-icon></span>
+                        <span class="title" id="reviews">Reviews</span>
+                    </a>
+                </li>
+                <li id="menu-users">
+                    <a href="#">
+                        <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                        <span class="title" >Users</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                        <span class="title" id="signout">Sign out</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- Main-->
+        <div id="main" class="main">
+            <div id="topbar" class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <div class="main-title"><i><h2>Admin Panel</h2></i></div>
+                <a class="userimg" href="./profile.html">
+                    <img src="../assets/userpic.jpg" alt="">
+                </a>
+            </div>
+            <div class="details">
+                <div id="idusers" class="users">
+                    <div class="titleusers">
+                        <h3>Users</h3>
+                    </div>
+                    <table class="list-users">
+                        <tr>
+                            <th class="th usersid">ID</th>
+                            <th class="th fname">First Name</th>
+                            <th class="th lname">Last Name</th>
+                            <th class="th email">Email</th>
+                            <th class="th password">Password</th>
+                            <th class="th user_piclink">Profile Pic</th>
+                            <th class="th type">Type</th>
+                            <th class="th editbtn">Edit</th>
+                        </tr>
+                    </table>
+                    
+                </div>
+                <div class="list-reviews">
+                    <div class="title-reviews">
+                        <h3>Reviews</h3>
+                    </div>
+                    <table class="reviews">
+                        <tr>
+                            <th class="th reviewid">ID</th>
+                            <th class="th users_id">user ID</th>
+                            <th class="th restaurants_id">Restaurant ID</th>
+                            <th class="th review_description">Description</th>
+                            <th class="th status">Status</th>
+                            <th class="th approve">Approve</th>
+                            <th class="th deny">Deny</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="list-restaurants">
+                    <div class="title-restaurants">
+                        <h3>Restaurants</h3>
+                    </div>
+                    <table class="restaurants">
+                        <tr>
+                            <th class="th restaurantid">ID</th>
+                            <th class="th name">Name</th>
+                            <th class="th restaurant_description">Description</th>
+                            <th class="th piclink">Profile pic</th>
+                            <th class="th address">Address</th>
+                            <th class="th id-categories">Category</th>
+                            
+                        </tr>
+                    </table>
+                    <div class="table-btns">
+                        <div class="addbtn-container">
+                            <button class="addbtn" id="addbtn">Add</button>
+                        </div>
+                        <div class="uploadbtn-container">
+                            <button class="uploadbtn" id="uploadbtn">upload</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Datalist -->
+        
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="../js/adminpanel.js" charset="utf-8"></script>
+</body>
+</html>
