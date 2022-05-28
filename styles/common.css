@@ -46,6 +46,13 @@ nav img{
     text-decoration: none;
     font-size: 95%;
 }
+.nav_links ul li div {
+    width: fit-content;
+}
+.nav_links ul li img{
+    border-radius: 50%;
+    position: relative;
+}
 .nav_links ul li a::after{
     content: '';
     width: 0%;
