@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Neue Montreal,Helvetica,Arial,sans-serif;
+}
+.header{
+    min-height: 70vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)), url(../assets/julia-zolotova-M_xIaxQE3Ms-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
