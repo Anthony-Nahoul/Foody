@@ -4,9 +4,95 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.png" />
+    <link href="../styles/common.css" type="text/css" rel="stylesheet" />
+    <link href="../styles/restaurantdetails.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>Restaurant - details</title>
 </head>
 <body>
-    
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="../assets/logo.png"></a>
+            <div class="nav_links" id="nav_Links">
+                <i class="fa-solid fa-x" style="color: rgb(207, 205, 205);" id="solid1" ></i>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="./restaurants.html">Restaurants</a></li>
+                    <li><a href="">About Us</a></li>
+                    <li class="img-profile desktop-only">
+                        <a>
+                            <img src="../assets/userpic.jpg" alt="user pic">
+                        </a>
+                        <div class="user-dropdown hide">
+                            <ul>
+                                <li><a href="./profile.html">Edit Profile</a></li>
+                                <li><a href="./login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="mobile-only"><a href="./profile.html">Profile</a></li>
+                    <li class="mobile-only"><a href="./login.html">Logout</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-grip-lines" style="color: rgb(241, 233, 233);" id="solid2" ></i>
+        </nav>
+        <div class="text_box">
+            <h1>Foody</h1>    
+            <p>Discover the best food & drinks in Beirut</p>    
+        </div>
+    </section>
+    <section class="single-restaurant-details small-container">
+        <h2>
+            Roadster Diner
+        </h2> 
+        <p>WHEN ROADSTER DINER FIRST OPENED ITS ACHRAFIEH DOORS, THE IDEA WAS SIMPLE: CREATE THE HOMIEST, 
+            MOST AUTHENTIC DINER EXPERIENCE THE CITY HAD EVER SEEN.
+            Lucky for us, the city responded. Pretty soon, 
+            our private dining booths were filling up and our pedestal stools were warm around the clock. But we were just getting started.
+            Truth be told, it’s been a blast. But of course, none of it would have been possible without you guys: 
+            your love & support carried us & got us this far. Here’s to the next couple of years.</p>
+        <div class="main-restaurant-image-container">
+            <img src="../assets/roadsterpic.jpg"/>
+            <div class="darker">
+                <div>
+                <div class="single-restaurant-category">
+                    American
+                </div>
+                <div class="single-restaurant-address">
+                    Beirut, Lebanon
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="single-restaurant-review small-container">
+        <div class="add-review">
+            <button class="review-btn" id="review-popup-button">Review</button>
+        </div>
+    </section>
+    <div class="overlay hide">
+        <div class="popup small-container">
+            <a class="close-icon"><span class="fa fa-close"></span></a>
+            <h2>Review the restaurant</h2>
+            <div class="rating-cards" id="rating-1">
+                <span class="fa fa-star star"></span>
+                <span class="fa fa-star star"></span>
+                <span class="fa fa-star star"></span>
+                <span class="fa fa-star star"></span>
+                <span class="fa fa-star star"></span>
+            </div>
+            <form >
+                <textarea rows="10" placeholder="Add your review"></textarea>
+                <div class="add-review">
+                    <button type="submit" class="review-btn">Review</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../js/common.js"></script>
+    <script src="../js/restaurantdetails.js"></script>
+    <script src="https://kit.fontawesome.com/a2e7f28c2e.js" crossorigin="anonymous"></script>
 </body>
 </html>

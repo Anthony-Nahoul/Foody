@@ -1,88 +1,4 @@
-/*CSS Main Page*/
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Neue Montreal,Helvetica,Arial,sans-serif;
-    box-sizing:border-box;
-}
 
-.header{
-    min-height: 70vh;
-    width: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
-    rgba(0, 0, 0, 0.5)), url(../assets/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-    background-position: center;
-    background-size: cover;
-    position: relative;
-}
-
-nav{
-    display: flex;
-    padding: 2% 6%;
-    justify-content: space-between;
-    align-items: center;
-
-}
-nav img{
-    width: 65px;
-}
-.nav_links{
-    flex: 1;
-    text-align: right;
-}
-.nav_links ul li{
-    list-style: none; /*to remove bullets*/
-    display: inline-block; /*to be horizontal*/
-    padding: 8px 12px;
-    position: relative;
-}
-.nav_links ul li a{
-    color: white;
-    text-decoration: none;
-    font-size: 95%;
-}
-.nav_links ul li div {
-    width: fit-content;
-}
-.nav_links ul li img{
-    border-radius: 50%;
-    position: relative;
-}
-.nav_links ul li a::after{
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: white;
-    display: block;
-    margin: auto;
-}
-.nav_links ul li :hover::after{
-    width: 100%;
-}
-.text_box{
-    width: 90%;
-    color: white;
-    position: absolute;
-    left: 50%;
-    /*transform is used to let the item to be at the center of div*/
-    transform: translate(-50%,-50%);
-    text-align: center;
-    margin-top: 5%;
-    margin-left: 2%;
-}
-.text_box h1{
-    font-size: 50px;
-    margin-right: 10%;
-
-}
-.text_box p{
-    font-size: 30px;
-    margin-right: 10%;
-
-}
-nav .fa-solid{
-    display: none;
-}
 .Restaurants{
     margin-left: 5%;
     margin-top: 5%;
@@ -145,11 +61,11 @@ nav .fa-solid{
     padding-left: 20%;
 }
 .fa-brands{
-    padding-left: 5%;
+    padding-right: 16px;
 }
 .footer a {
     color: white;
-    padding-right: 2%;
+    padding-right: 8px;
 }
 .categories{
     text-align: center;
@@ -277,42 +193,8 @@ nav .fa-solid{
   }
 
 
-
-
-
 @media (max-width: 700px){
-    .text_box h1{
-        font-size: 40px;
-    }
-    .text_box p{
-        font-size: 20px;
-        margin-top: 10px;
-    }
-    .text_box{
-        top: 50%;
-    }
-    .nav_links{
-        position: absolute;
-        background: rgb(129, 15, 15);
-        height: 100vh;
-        width: 200px;
-        top: 0;
-        right: -200px;
-        text-align: left;
-        z-index: 2;
-        transition: 1s;
-    }
-    
-    nav .fa-solid{
-        display: block;
-        color: white;
-        margin: 10px;
-        font-size: 22px;
-        cursor: pointer
-    } 
-    .nav_links ul {
-        padding: 50px;
-    }
+ 
     .Restaurants{
         margin-top: 10px;
         flex-direction: column;
@@ -350,12 +232,32 @@ nav .fa-solid{
         display: flex;
         justify-content: space-between;
         flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .footer .col{
+        flex-basis: 100%;
     }
     .footer p {
         font-size: 10px;
+        padding: 0;
+        padding-bottom: 16px;
+    }
+    .footer a{
+        padding-left: 15.5px;
     }
     .footer h1{
         font-size: 15px;
+        padding: 0;
+        padding-bottom: 16px;
+    }
+    .footer .social-media-icons{
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+    }
+    .footer .social-media-icons i{
+        padding-right: 0;
     }
     .mySlides .text{
         font-size: 15px;
