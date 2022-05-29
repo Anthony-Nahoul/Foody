@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/common.css">
     <link rel="stylesheet" href="styles/mainpage.css">
-    <script src="https://kit.fontawesome.com/a2e7f28c2e.js" crossorigin="anonymous"></script>
-    <script src="js/mainpage.js"></script>
+    
     <title>Foody</title>
 </head>
 <body>
@@ -18,10 +17,21 @@
                 <i class="fa-solid fa-x" style="color: rgb(207, 205, 205);" id="solid1" ></i>
                 <ul>
                     <li><a href="">Home</a></li>
-                    <li><a href="">Restaurants</a></li>
+                    <li><a href="./pages/restaurants.html">Restaurants</a></li>
                     <li><a href="">About Us</a></li>
-                    <li><a href="">Sign in</a></li>
+                    <li><a href="./pages/login.html">Sign in</a></li>
                     <li><a href="">Sign Up</a></li>
+                    <li class="img-profile desktop-only hide">
+                        <a>
+                            <img src="./assets/userpic.jpg" alt="user pic">
+                        </a>
+                        <div class="user-dropdown hide">
+                            <ul>
+                                <li><a href="./profile.html">Edit Profile</a></li>
+                                <li><a href="./login.html">Logout</a></li>
+                            </ul>
+                        </div>
+                    </li>
 
                 </ul>
             </div>
@@ -109,5 +119,8 @@
             </div>
         </div>
     </section>
+    <script src="https://kit.fontawesome.com/a2e7f28c2e.js" crossorigin="anonymous"></script>
+    <script src="js/mainpage.js"></script>
+    <script src="js/common.js"></script>
 </body>
 </html>
