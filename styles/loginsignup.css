@@ -16,10 +16,11 @@ body{
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    height: 90%;
 }
 .container h1{
     text-align: center;
-    padding: 0 0 20px 0;
+    padding: 0 0 2px 0;
     border-bottom: 1px solid silver;
     color: rgba(238, 164, 27, 0.932);
 }
@@ -31,9 +32,10 @@ body{
 form .txt_field{
     position: relative;
     border-bottom: 2px solid #adadad;
-    margin: 10% 0;
+    margin: 7% 0;
 
 }
+
 .txt_field input{
     width: 100%;
     padding: 0 5px;
@@ -44,6 +46,7 @@ form .txt_field{
     outline: none;
 
 }
+
 .txt_field label{
     position: absolute;
     top: 50%;
@@ -140,7 +143,7 @@ input[type="submit"]:hover{
         top: 50%;
         left: 50%;
         width: 70%;
-        height: 80%;
+        height: 90%;
         display: flex;
         flex-direction: column;
     }

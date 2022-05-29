@@ -1,21 +1,24 @@
 document.addEventListener("DOMContentLoaded", (event) => {
 
 var myInput = document.getElementById("password1");
-var myInput2 = document.getElementById("password2");
+//var myInput2 = document.getElementById("password2");
 
 var submit_button = document.getElementById("submit")
 
-submit_button.addEventListener("click", function () { return validate()})
-
+//submit_button.addEventListener("click", validate)
+/*
 function validate() {
+  console.log("clicked")
     if (myInput.value != myInput2.value) {
         alert("Passwords do not match.");
-        return false;
+        submit_button.disabled=true;
+        //submit_button.removeEventListener('click',validate)
     }
-    return true;
-    
-}
+    submit_button.disabled=false;
+    //submit_button.addEventListener("click", validate)
 
+}
+*/
 var letter = document.getElementById("letter");
 var capital = document.getElementById("capital");
 var number = document.getElementById("number");
