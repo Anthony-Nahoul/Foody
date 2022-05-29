@@ -61,11 +61,11 @@
     padding-left: 20%;
 }
 .fa-brands{
-    padding-left: 5%;
+    padding-right: 16px;
 }
 .footer a {
     color: white;
-    padding-right: 2%;
+    padding-right: 8px;
 }
 .categories{
     text-align: center;
@@ -232,12 +232,32 @@
         display: flex;
         justify-content: space-between;
         flex-direction: row;
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .footer .col{
+        flex-basis: 100%;
     }
     .footer p {
         font-size: 10px;
+        padding: 0;
+        padding-bottom: 16px;
+    }
+    .footer a{
+        padding-left: 15.5px;
     }
     .footer h1{
         font-size: 15px;
+        padding: 0;
+        padding-bottom: 16px;
+    }
+    .footer .social-media-icons{
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+    }
+    .footer .social-media-icons i{
+        padding-right: 0;
     }
     .mySlides .text{
         font-size: 15px;
