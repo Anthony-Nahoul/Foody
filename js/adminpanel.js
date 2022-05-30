@@ -14,8 +14,9 @@ function usersClicked(){
     users.style.display = 'block';
     usersbtn.style.backgroundColor = "var(--white)";
     usersbtn.querySelector('a').style.color = "var(--bordeau)";
-    addUsers();
+    
 }
+addUsers();
 // this function will display the reviews table on menu reviews click and hide the other tables
 let reviewsbtn = document.querySelector('.reviewbtn');
 let reviews = document.querySelector('.list-reviews');
@@ -30,8 +31,9 @@ function reviewsClicked(){
     restaurantsbtn.querySelector('a').style.color = "var(--white)";
     reviewsbtn.style.backgroundColor = "var(--white)";
     reviewsbtn.querySelector('a').style.color = "var(--bordeau)";
+    
 }
-
+getReviews();
 let restaurantsbtn = document.querySelector('.restaurantsbtn');
 let restaurants = document.querySelector('.list-restaurants');
 restaurantsbtn.addEventListener("click", restaurantsClicked);
@@ -81,7 +83,7 @@ function showMenu(){
 let userstable = document.querySelector(".list-users");
 function addUsers(){
     axios({
-        method: 'post',
+        method: 'GET',
         url: 'http://localhost/Foody-backend/getusers.php',
     })
     .then(function (response) {
@@ -118,4 +120,34 @@ function addUsers(){
     }
 )
 }
-
+// get reviews 
+let reviewstable = document.querySelector(".reviews");
+function getReviews(){
+    axios({
+        method: 'GET',
+        url: 'http://localhost/Foody-backend/getreviews.php',
+    })
+    .then(function (response) {
+        console.log(response.data);
+        let status = "";
+        for (let r = 0; r<response.data.length; r++){
+            if (response.data[r]["approved"]== 0){
+                status = "pending";
+            }
+        else
+            {
+                status = "approved"
+            }
+            reviewstable . innerHTML += `<tr>
+            <td>${response.data[r]["id"]}</td>
+            <td>${response.data[r]["users_id"]}</td>
+            <td>${response.data[r]["restaurants_id"]}</td>
+            <td>${response.data[r]["review_description"]}</td>
+            <td>${status}</td>
+            <td class="approved-button" ><a href= ""><ion-icon name="shield-checkmark"></ion-icon></a></td>
+            <td class="denied-button" ><a href= ""><ion-icon name="close"></ion-icon></a></td>
+        </tr>`;
+    }})
+    
+}
+// Get restaurants
