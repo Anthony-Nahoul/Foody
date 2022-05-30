@@ -14,6 +14,7 @@ function usersClicked(){
     users.style.display = 'block';
     usersbtn.style.backgroundColor = "var(--white)";
     usersbtn.querySelector('a').style.color = "var(--bordeau)";
+    addUsers();
 }
 // this function will display the reviews table on menu reviews click and hide the other tables
 let reviewsbtn = document.querySelector('.reviewbtn');
@@ -75,4 +76,29 @@ let navigationbar = document.querySelector(".navigation");
 toggle.addEventListener("click",showMenu);
 function showMenu(){
     navigationbar.style.display = "block";
+}
+
+let userstable = document.querySelector(".list-users");
+function addUsers(){
+    axios({
+        method: 'post',
+        url: 'http://localhost/Foody-backend/getusers.php',
+    })
+    .then(function (response) {
+        console.log(response.data);
+        for (let u = 0; u<response.data.length; u++){
+            userstable . innerHTML += `<tr>
+            <td>${response.data[u]["id"]}</td>
+            <td>${response.data[u]["fname"]}</td>
+            <td>${response.data[u]["lname"]}</td>
+            <td>${response.data[u]["email"]}</td>
+            <td>${response.data[u]["password"]}</td>
+            <td>${response.data[u]["user_piclink"]}</td>
+            <td class="given-type" contenteditable = true>${response.data[u]["type"]}</td>
+            <td><button class="edituserbutton">Edit</button></td>
+        </tr>`;
+        }
+    }
+)
+
 }
