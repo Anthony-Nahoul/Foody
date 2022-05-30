@@ -58,7 +58,13 @@ function addRow(){
     <td><input type='text'/></td>
     <td><input type='file'/></td>
     <td><input type='text'/></td>
-    <td><input type='text'/></td>
+    <td><select>
+        <option value= '1'>category A</option>
+        <option value= '2'>category B</option>
+        <option value= '3'>category C</option>
+        <option value= '4'>category D</option>
+        <option value= '5'>category F</option>
+    </select> </td>
 </tr>`;
 }
 
