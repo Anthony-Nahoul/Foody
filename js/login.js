@@ -21,6 +21,7 @@
             } else {
                 window.location.href='http://localhost/Foody/index.html'
             }
+            localStorage.setItem("id",response.id)
 
     }
         )}
