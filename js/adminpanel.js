@@ -58,15 +58,15 @@ function restaurantsClicked(){
 }
 
 
-//took the inner html of the table and added the format needed to its rows
+//took the inner html of the table and added the format needed to its restaurant
 function addRestaurantRow(){
     table_restaurants.innerHTML+=`<tr>
     <td></td>
-    <td><input type='text'/></td>
-    <td><input type='text'/></td>
-    <td><input type='text'/></td>
-    <td><input type='text'/></td>
-    <td><select>
+    <td><input name="name[]" type='text'/></td>
+    <td><input name="description[]" type='text'/></td>
+    <td><input name="piclink[]" type='text'/></td>
+    <td><input name="address[]" type='text'/></td>
+    <td><select name="categories_id[]">
         <option value= '1'>category A</option>
         <option value= '2'>category B</option>
         <option value= '3'>category C</option>
@@ -77,6 +77,7 @@ function addRestaurantRow(){
 }
 
 addbtn.addEventListener('click', addRestaurantRow);
+
 
 let toggle = document.querySelector(".toggle");
 let navigationbar = document.querySelector(".navigation");
@@ -155,11 +156,24 @@ function getReviews(){
             <td class="approved-button" id="${response.data[r]["id"]}" ><a href= ""><ion-icon name="shield-checkmark"></ion-icon></a></td>
             <td class="denied-button" ><a href= ""><ion-icon name="close"></ion-icon></a></td>
         </tr>`;
-        // let btnapprove = document.querySelector(`#${response.data[r]["id"]}`);
-        // btnapprove.addEventListener('click', function(){
-        // status = 'approved';
-
-
+        var reviewapprovedbuttons = document.querySelectorAll(".approved-button");
+        reviewapprovedbuttons.forEach(function(approve, index){
+            approve.addEventListener("click", function(){
+                var reviewid = response.data[index]["id"];
+                let data = new FormData();
+                data.append('id', reviewid);
+                data.append('approved', 1);
+                axios({
+                    method: 'post',
+                    url: 'http://localhost/Foody-backend/updateReviewStatus.php',
+                    data: data,
+                })
+                .then(function (response) {
+                    console.log(response);
+                    })
+            })
+        })
+        
     }
     
     
