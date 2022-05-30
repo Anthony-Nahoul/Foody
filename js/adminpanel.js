@@ -64,7 +64,7 @@ function addRestaurantRow(){
     <td></td>
     <td><input type='text'/></td>
     <td><input type='text'/></td>
-    <td><input type='file'/></td>
+    <td><input type='text'/></td>
     <td><input type='text'/></td>
     <td><select>
         <option value= '1'>category A</option>
@@ -94,7 +94,7 @@ function addUsers(){
     .then(function (response) {
         console.log(response.data);
         for (let u = 0; u<response.data.length; u++){
-            userstable . innerHTML += `<tr>
+            userstable . innerHTML += `<tr class = "row-${u}"> 
             <td>${response.data[u]["id"]}</td>
             <td>${response.data[u]["fname"]}</td>
             <td>${response.data[u]["lname"]}</td>
@@ -103,25 +103,27 @@ function addUsers(){
             <td>${response.data[u]["user_piclink"]}</td>
             <td class="given-type" contenteditable = true>${response.data[u]["type"]}</td>
             <td><button class="edituserbutton">Edit</button></td>
-        </tr>`;
+        </tr>`;}
         // editing type
-        var editbutton = document.querySelector(".edituserbutton");
-        editbutton.addEventListener("click", function(){
-            var userid = response.data[u]["id"];
-            var usertype = response.data[u]["type"];
-            let data = new FormData();
-            data.append('id', userid);
-            data.append('type', usertype);
-            axios({
-                method: 'post',
-                url: 'http://localhost/project/updateUserType.php',
-                data: data,
-            })
-            .then(function (response) {
-                console.log(response);
+        var editbuttons = document.querySelectorAll(".edituserbutton");
+        editbuttons.forEach(function(editbutton, index){
+            editbutton.addEventListener("click", function(){
+                var userid = response.data[index]["id"];
+                var usertype = document.querySelector(`.row-${index} .given-type`).innerHTML;
+                let data = new FormData();
+                data.append('id', userid);
+                data.append('type', usertype);
+                axios({
+                    method: 'post',
+                    url: 'http://localhost/Foody-backend/updateUserType.php',
+                    data: data,
                 })
-        })
-        }
+                .then(function (response) {
+                    console.log(response);
+                    })
+            })
+        }) 
+        
     }
 )
 }
