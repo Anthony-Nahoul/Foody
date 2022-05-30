@@ -1,5 +1,7 @@
 //JS for ADMIN PANEL
-
+getRestaurants();
+getReviews();
+addUsers();
 let users = document.getElementById("idusers");
 let usersbtn = document.querySelector("#menu-users");
 usersbtn.addEventListener("click", usersClicked);
@@ -16,7 +18,7 @@ function usersClicked(){
     usersbtn.querySelector('a').style.color = "var(--bordeau)";
     
 }
-addUsers();
+
 // this function will display the reviews table on menu reviews click and hide the other tables
 let reviewsbtn = document.querySelector('.reviewbtn');
 let reviews = document.querySelector('.list-reviews');
@@ -33,7 +35,7 @@ function reviewsClicked(){
     reviewsbtn.querySelector('a').style.color = "var(--bordeau)";
     
 }
-getReviews();
+
 let restaurantsbtn = document.querySelector('.restaurantsbtn');
 let restaurants = document.querySelector('.list-restaurants');
 restaurantsbtn.addEventListener("click", restaurantsClicked);
@@ -52,7 +54,10 @@ function restaurantsClicked(){
     reviewsbtn.querySelector('a').style.color = "var(--white)";
     restaurantsbtn.style.backgroundColor = "var(--white)";
     restaurantsbtn.querySelector('a').style.color = "var(--bordeau)";
+    
 }
+
+
 //took the inner html of the table and added the format needed to its rows
 function addRestaurantRow(){
     table_restaurants.innerHTML+=`<tr>
@@ -120,8 +125,9 @@ function addUsers(){
     }
 )
 }
-// get reviews 
+// get reviews ffrom API
 let reviewstable = document.querySelector(".reviews");
+
 function getReviews(){
     axios({
         method: 'GET',
@@ -129,7 +135,7 @@ function getReviews(){
     })
     .then(function (response) {
         console.log(response.data);
-        let status = "";
+        var status = "";
         for (let r = 0; r<response.data.length; r++){
             if (response.data[r]["approved"]== 0){
                 status = "pending";
@@ -144,10 +150,39 @@ function getReviews(){
             <td>${response.data[r]["restaurants_id"]}</td>
             <td>${response.data[r]["review_description"]}</td>
             <td>${status}</td>
-            <td class="approved-button" ><a href= ""><ion-icon name="shield-checkmark"></ion-icon></a></td>
+            <td class="approved-button" id="${response.data[r]["id"]}" ><a href= ""><ion-icon name="shield-checkmark"></ion-icon></a></td>
             <td class="denied-button" ><a href= ""><ion-icon name="close"></ion-icon></a></td>
+        </tr>`;
+        // let btnapprove = document.querySelector(`#${response.data[r]["id"]}`);
+        // btnapprove.addEventListener('click', function(){
+        // status = 'approved';
+
+
+    }
+    
+    
+    
+})
+}
+
+// Get restaurants from API
+let restaurantstable = document.querySelector(".restaurants");
+function getRestaurants(){
+    axios({
+        method: 'GET',
+        url: 'http://localhost/Foody-backend/getrestaurants.php',
+    })
+    .then(function (response) {
+        console.log(response.data);
+        for (let resto = 0; resto<response.data.length; resto++){
+            restaurantstable.innerHTML += `<tr>
+            <td>${response.data[resto]["id"]}</td>
+            <td>${response.data[resto]["name"]}</td>
+            <td>${response.data[resto]["description"]}</td>
+            <td>${response.data[resto]["piclink"]}</td>
+            <td>${response.data[resto]["address"]}</td>
+            <td>${response.data[resto]["categories_id"]}</td>
         </tr>`;
     }})
     
 }
-// Get restaurants
