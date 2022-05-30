@@ -52,7 +52,7 @@ function restaurantsClicked(){
     restaurantsbtn.querySelector('a').style.color = "var(--bordeau)";
 }
 //took the inner html of the table and added the format needed to its rows
-function addRow(){
+function addRestaurantRow(){
     table_restaurants.innerHTML+=`<tr>
     <td></td>
     <td><input type='text'/></td>
@@ -69,7 +69,7 @@ function addRow(){
 </tr>`;
 }
 
-addbtn.addEventListener('click', addRow);
+addbtn.addEventListener('click', addRestaurantRow);
 
 let toggle = document.querySelector(".toggle");
 let navigationbar = document.querySelector(".navigation");
@@ -77,7 +77,7 @@ toggle.addEventListener("click",showMenu);
 function showMenu(){
     navigationbar.style.display = "block";
 }
-
+// get users from API
 let userstable = document.querySelector(".list-users");
 function addUsers(){
     axios({
@@ -97,8 +97,25 @@ function addUsers(){
             <td class="given-type" contenteditable = true>${response.data[u]["type"]}</td>
             <td><button class="edituserbutton">Edit</button></td>
         </tr>`;
+        // editing type
+        var editbutton = document.querySelector(".edituserbutton");
+        editbutton.addEventListener("click", function(){
+            var userid = response.data[u]["id"];
+            var usertype = response.data[u]["type"];
+            let data = new FormData();
+            data.append('id', userid);
+            data.append('type', usertype);
+            axios({
+                method: 'post',
+                url: 'http://localhost/project/updateUserType.php',
+                data: data,
+            })
+            .then(function (response) {
+                console.log(response);
+                })
+        })
         }
     }
 )
-
 }
+
