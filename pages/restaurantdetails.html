@@ -44,10 +44,10 @@
         </div>
     </section>
     <section class="single-restaurant-details small-container">
-        <h2>
+        <h2 class="single-restaurant-title">
             Roadster Diner
         </h2> 
-        <p>WHEN ROADSTER DINER FIRST OPENED ITS ACHRAFIEH DOORS, THE IDEA WAS SIMPLE: CREATE THE HOMIEST, 
+        <p class="single-restaurant-description">WHEN ROADSTER DINER FIRST OPENED ITS ACHRAFIEH DOORS, THE IDEA WAS SIMPLE: CREATE THE HOMIEST, 
             MOST AUTHENTIC DINER EXPERIENCE THE CITY HAD EVER SEEN.
             Lucky for us, the city responded. Pretty soon, 
             our private dining booths were filling up and our pedestal stools were warm around the clock. But we were just getting started.
@@ -84,9 +84,10 @@
                 <span class="fa fa-star star"></span>
             </div>
             <form >
-                <textarea rows="10" placeholder="Add your review"></textarea>
+                <input type="hidden" value="0" class="hidden-rate">
+                <textarea class="review-text" rows="10" placeholder="Add your review"></textarea>
                 <div class="add-review">
-                    <button type="submit" class="review-btn">Review</button>
+                    <button type="submit" class="review-btn submit-btn">Review</button>
                 </div>
             </form>
         </div>
