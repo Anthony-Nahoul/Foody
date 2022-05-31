@@ -15,13 +15,16 @@
             url:'http://localhost/Foody-backend/login.php',
             data: data
         }).then(function (response) {
-            console.log(response.data.type,'response',response.data.response)
+            console.log(response);
+            console.log('reponse data type',response.data.type,'response data response',response.data.response)
+
             if (response.data.type=='admin' && response.data.response=='Logged in'){
                 window.location.href='http://localhost/Foody/pages/adminpanel.html'
-            } else {
+            } else if(response.data.type=='user' && response.data.response=='Logged in'){
                 window.location.href='http://localhost/Foody/index.html'
             }
-            localStorage.setItem("id",response.id)
-
-    }
+            localStorage.setItem("id",response.user_id)
+ 
+           
+;    }
         )}
