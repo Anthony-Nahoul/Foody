@@ -15,3 +15,15 @@ function showMenu(){
 function hideMenu(){
     nav_links.style.right = "-200px";
 }
+let logout_button1 = document.getElementById("logout_button1");
+
+logout_button1.addEventListener("click",function(){
+    console.log("clicked");
+    localStorage.setItem("id","logged out");
+});
+let logout_button2 = document.getElementById("logout_button2");
+
+logout_button2.addEventListener("click",function(){
+    console.log("clicked");
+    localStorage.setItem("id","logged out");
+});
