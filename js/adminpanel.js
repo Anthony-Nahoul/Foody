@@ -59,21 +59,37 @@ function restaurantsClicked(){
 
 
 //took the inner html of the table and added the format needed to its restaurant
-function addRestaurantRow(){
-    table_restaurants.innerHTML+=`<tr>
+function addRestaurantRow() {
+  table_restaurants.innerHTML += `<tr>
     <td></td>
     <td><input name="name[]" type='text'/></td>
     <td><input name="description[]" type='text'/></td>
     <td><input name="piclink[]" type='text'/></td>
     <td><input name="address[]" type='text'/></td>
-    <td><select name="categories_id[]">
-        <option value= '1'>category A</option>
-        <option value= '2'>category B</option>
-        <option value= '3'>category C</option>
-        <option value= '4'>category D</option>
-        <option value= '5'>category F</option>
+    <td><select class="categoriesoptions" name="categories_id[]">
+        <option class="categories" value= '1'></option>
+        <option class="categories" value= '2'></option>
+        <option class="categories" value= '3'></option>
+        <option class="categories" value= '4'></option>
+        <option class="categories" value= '5'></option>
     </select> </td>
-</tr>`;
+    </tr>`;
+  axios({
+    method: "GET",
+    url: "http://localhost/Foody-backend/getcategories.php",
+  }).then(function (response) {
+      let categorieslist = document.querySelector(".categoriesoptions");
+      let categories = document.querySelectorAll(".categories");
+      for(let category = 0; category<categories.length; category++){
+        console.log(response.data[category]);
+          categories[category].innerHTML = response.data[category]["categoryname"];
+          categories[category].setAttribute("value", response.data[category]["id"]);
+      }
+
+
+    console.log(response.data);
+  
+  });
 }
 
 addbtn.addEventListener('click', addRestaurantRow);
@@ -153,7 +169,7 @@ function getReviews(){
             <td>${response.data[r]["restaurants_id"]}</td>
             <td>${response.data[r]["review_description"]}</td>
             <td>${status}</td>
-            <td class="approved-button" id="${response.data[r]["id"]}" ><a href= ""><ion-icon name="shield-checkmark"></ion-icon></a></td>
+            <td class="approved-button"><a href= ""><ion-icon name="shield-checkmark"></ion-icon></a></td>
             <td class="denied-button" ><a href= ""><ion-icon name="close"></ion-icon></a></td>
         </tr>`;
         var reviewapprovedbuttons = document.querySelectorAll(".approved-button");
@@ -166,6 +182,22 @@ function getReviews(){
                 axios({
                     method: 'post',
                     url: 'http://localhost/Foody-backend/updateReviewStatus.php',
+                    data: data,
+                })
+                .then(function (response) {
+                    console.log(response);
+                    })
+            })
+        })
+        var reviewdeniedbuttons = document.querySelectorAll(".denied-button");
+        reviewdeniedbuttons.forEach(function(deny, index){
+            deny.addEventListener("click", function(){
+                var reviewid = response.data[index]["id"];
+                let data = new FormData();
+                data.append('id', reviewid);
+                axios({
+                    method: 'post',
+                    url: 'http://localhost/Foody-backend/deletereview.php',
                     data: data,
                 })
                 .then(function (response) {
