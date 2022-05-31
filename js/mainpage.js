@@ -42,6 +42,39 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+//retreiving user id from local storage
+let id = window.localStorage.getItem("id");
+console.log(id);
+//if the user is logged in 
+if (id!==null && id!=="logged out"){
+  console.log("user logged in");
+  let signup_text = document.getElementById("signin");
+  let signin_text = document.getElementById("signup");
+  console.log(signin_text);
+  console.log(signup_text);
+
+  signup_text.classList.add('hide');
+  signin_text.classList.add('hide');
+  
+
+  let image = document.getElementById("profile_image");
+  console.log(image);
+  image.classList.remove("hide");
+  let mobile_item = document.querySelector(".mobile-only");
+  console.log(mobile_item);
+  mobile_item.classList.remove("hide");
+}
+
+else{
+  //hide profile and Logout 
+  let image = document.getElementById("profile_image");
+  console.log(image);
+  image.classList.add("hide");
+  let mobile_item = document.querySelector(".mobile-only");
+  console.log(mobile_item);
+  mobile_item.classList.add("hide"); 
+
+}
 
 
 })
