@@ -19,9 +19,9 @@
             console.log('reponse data type',response.data.type,'response data response',response.data.response)
 
             if (response.data.type=='admin' && response.data.response=='Logged in'){
-               window.location.href='http://localhost/Foody/pages/adminpanel.html'
+               window.location.href='pages/adminpanel.html'
             } else if(response.data.type=='user' && response.data.response=='Logged in'){
-                window.location.href='http://localhost/Foody/index.html'
+                window.location.href='/index.html'
             }
             localStorage.setItem("id",response.data.user_id);
 
