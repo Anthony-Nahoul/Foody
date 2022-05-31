@@ -278,9 +278,7 @@
     .prev{
         padding: 10px;
     }
-    .mobile-only{
-        display: none!important;
-    }
+    
     
 }
 @media (max-width: 500px){
