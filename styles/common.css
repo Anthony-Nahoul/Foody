@@ -4,7 +4,7 @@
     font-family: joanna-nova, serif;
     box-sizing:border-box;
 }
-body{
+html, body{
     overflow-x: hidden;
 }
 .mobile-only{
