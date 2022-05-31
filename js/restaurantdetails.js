@@ -49,7 +49,7 @@ function toggleOverlay(){
 
 // GET INFO FOR RESTAURANTS
 let restoid =1;
- let userid = 3;   /*window.localStorage.getItem(id);*/
+ let userid = window.localStorage.getItem(id);
 let title = document.querySelector(".single-restaurant-title");
 let description = document.querySelector(".single-restaurant-description");
 let categoryname = document.querySelector(".single-restaurant-category");
