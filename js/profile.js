@@ -77,6 +77,36 @@ myInput.onkeyup = function() {
   }
 
 
-}
+} //linking with its API
+let button = document.getElementById("submit");
+button.addEventListener("click", submitclick);
+function submitclick(){
+    
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+    let firstname = document.getElementById("fname").value;
+    let lastname = document.getElementById("lname").value;
+    let id= window.localStorage.getItem("id");
+    console.log(id);
+    let data = new FormData();
+    data.append('email', email);
+    data.append('password', password);
+    data.append('firstname', firstname);
+    data.append('lastname', lastname);
+    data.append('id', id);
 
+    axios({
+        method: 'POST',
+        url:'http://localhost/Foody-backend/profile.php',
+        data: data
+    }).then(function (response) {
+        console.log("batoul");
+        console.log(response);
+
+         if(id!==null && id!=="logged out"){
+            window.location.href='http://localhost/Foody/index.html'
+        }
+       
+;    }
+    )}
 })
