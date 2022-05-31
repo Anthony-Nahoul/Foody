@@ -13,9 +13,7 @@ html, body{
 button{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
-.hide{
-    display: none!important;
-}
+
 .header{
     min-height: 70vh;
     width: 100%;
@@ -146,7 +144,7 @@ nav .user-dropdown li:hover a{
         display: none!important;
     }
     .mobile-only{
-        display: inherit!important;
+        display: block!important;
     }
     .text_box h1{
         font-size: 40px;
@@ -181,4 +179,7 @@ nav .user-dropdown li:hover a{
         padding: 50px;
         flex-wrap: wrap;
     }
+}
+.hide{
+    display: none!important;
 }
